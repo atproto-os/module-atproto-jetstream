@@ -12,8 +12,9 @@ This module enables real-time reactive syncing of Open Web Desktop state
 from the AT Protocol using Jetstream, a lightweight streaming service.
 
 ## Features
+
 - Connects to Jetstream over WebSocket
-- Subscribes to desktop collections (org.owdproject.*)
+- Subscribes to desktop collections (org.owdproject.\*)
 - Streams updates for `desktop`, `windows`, and `meta`
 - Automatically patches Pinia stores in real-time
 
