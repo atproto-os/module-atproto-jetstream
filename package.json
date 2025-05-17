@@ -1,0 +1,13 @@
+{
+  "name": "@owdproject/module-atproto-jetstream",
+  "version": "0.0.1",
+  "license": "MIT",
+  "homepage": "https://github.com/atproto-os/module-atproto-jetstream",
+  "author": {
+    "name": "Open Web Desktop Team",
+    "url": "https://github.com/owdproject"
+  },
+  "peerDependencies": {
+    "@owdproject/core": "^3.1.2"
+  }
+}
