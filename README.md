@@ -39,6 +39,11 @@ atprotoJetstream: {
 }
 ```
 
+## Requirements
+
+- [@owdproject/module-atproto](https://github.com/atproto-os/module-atproto)
+- [@owdproject/module-atproto-persistence](https://github.com/atproto-os/module-atproto-persistence)
+
 ## License
 
 This module is released under the [MIT License](LICENSE).
