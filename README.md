@@ -30,7 +30,7 @@ owd install-module @owdproject/module-atproto-jetstream
 
 You could set this configuration in `/desktop/owd.config.ts`:
 
-```json
+```js
 atprotoJetstream: {
   {
     startOwnerDesktopStreamOnMounted: true,
