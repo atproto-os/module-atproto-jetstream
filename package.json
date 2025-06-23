@@ -1,6 +1,6 @@
 {
   "name": "@owdproject/module-atproto-jetstream",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "homepage": "https://github.com/atproto-os/module-atproto-jetstream",
   "author": {
@@ -8,6 +8,6 @@
     "url": "https://github.com/owdproject"
   },
   "peerDependencies": {
-    "@owdproject/core": "^3.1.2"
+    "@owdproject/core": "^3.1.4"
   }
 }
