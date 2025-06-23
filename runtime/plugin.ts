@@ -11,19 +11,19 @@ export default defineNuxtPlugin({
       const atproto = useAtproto()
 
       if (
-        runtimeConfig.public.atprotoJetstream &&
-        runtimeConfig.public.atprotoJetstream.startOwnerDesktopStreamOnMounted
+        runtimeConfig.public.desktop.atprotoJetstream &&
+        runtimeConfig.public.desktop.atprotoJetstream.startOwnerDesktopStreamOnMounted
       ) {
 
         if (atproto.isLogged()) {
           const agent = useAgent('private')
 
-          if (runtimeConfig.public.atprotoDesktop.owner.did === agent.assertDid) {
+          if (runtimeConfig.public.desktop.atprotoDesktop.owner.did === agent.assertDid) {
             return
           }
         }
 
-        startActorDesktopStreamw(runtimeConfig.public.atprotoDesktop.owner.did)
+        startActorDesktopStreamw(runtimeConfig.public.desktop.atprotoDesktop.owner.did)
       }
     })
   },

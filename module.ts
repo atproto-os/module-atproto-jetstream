@@ -13,7 +13,7 @@ export default defineNuxtModule({
     const { resolve } = createResolver(import.meta.url)
 
     // set runtime config
-    _nuxt.options.runtimeConfig.public.atprotoJetstream = _options
+    _nuxt.options.runtimeConfig.public.desktop.atprotoJetstream = _options
 
     addPlugin({
       src: resolve('./runtime/plugin'),

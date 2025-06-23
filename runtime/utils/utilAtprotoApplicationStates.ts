@@ -104,7 +104,7 @@ export async function startActorDesktopStreamw(actorDid: string) {
   }
 
   ws = new WebSocket(
-    getJetstreamUrl(runtimeConfig.public.atprotoJetstream.host, actorDid)
+    getJetstreamUrl(runtimeConfig.public.desktop.atprotoJetstream.host, actorDid)
   )
   ws.addEventListener('message', handleMessage)
 }
