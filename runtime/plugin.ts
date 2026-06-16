@@ -1,29 +1,28 @@
 import { defineNuxtPlugin, useRuntimeConfig } from 'nuxt/app'
-import { useAtproto, useAgent } from '#imports'
-import { startActorDesktopStreamw } from './utils/utilAtprotoApplicationStates'
+import { useAtprotoSession, useAtprotoAgent } from '#imports'
+import { startActorDesktopStream } from './utils/utilAtprotoApplicationStates'
 
 export default defineNuxtPlugin({
-  name: 'owd-plugin-atproto-jetstream',
-  dependsOn: ['owd-plugin-atproto'],
+  name: 'desktop-plugin-atproto-jetstream',
+  dependsOn: ['desktop-plugin-atproto'],
   async setup(nuxt) {
     nuxt.hook('app:mounted', () => {
       const runtimeConfig = useRuntimeConfig()
-      const atproto = useAtproto()
+      const { isLogged } = useAtprotoSession()
 
       if (
         runtimeConfig.public.desktop.atprotoJetstream &&
         runtimeConfig.public.desktop.atprotoJetstream.startOwnerDesktopStreamOnMounted
       ) {
-
-        if (atproto.isLogged()) {
-          const agent = useAgent('private')
+        if (isLogged.value) {
+          const agent = useAtprotoAgent('authenticated')
 
           if (runtimeConfig.public.desktop.atprotoDesktop.owner.did === agent.assertDid) {
             return
           }
         }
 
-        startActorDesktopStreamw(runtimeConfig.public.desktop.atprotoDesktop.owner.did)
+        startActorDesktopStream(runtimeConfig.public.desktop.atprotoDesktop.owner.did)
       }
     })
   },

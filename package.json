@@ -8,6 +8,7 @@
     "url": "https://github.com/owdproject"
   },
   "peerDependencies": {
-    "@owdproject/core": "^3.1.4"
+    "@owdproject/core": "^3.4.0",
+    "@owdproject/module-atproto": "^0.0.1"
   }
 }

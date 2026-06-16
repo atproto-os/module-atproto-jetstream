@@ -1,8 +1,9 @@
-import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit'
+import { addPlugin, createResolver } from '@nuxt/kit'
+import { defineDesktopModule } from '@owdproject/core/kit/authoring'
 
-export default defineNuxtModule({
+export default defineDesktopModule({
   meta: {
-    name: 'owd-module-atproto-jetstream',
+    name: 'desktop-module-atproto-jetstream',
     configKey: 'atprotoJetstream',
   },
   defaults: {
@@ -11,9 +12,6 @@ export default defineNuxtModule({
   },
   setup(_options, _nuxt) {
     const { resolve } = createResolver(import.meta.url)
-
-    // set runtime config
-    _nuxt.options.runtimeConfig.public.desktop.atprotoJetstream = _options
 
     addPlugin({
       src: resolve('./runtime/plugin'),

@@ -25,7 +25,7 @@ function getJetstreamUrl(host: string, actorDid: string) {
  *
  * @param actorDid
  */
-export async function startActorDesktopStreamw(actorDid: string) {
+export async function startActorDesktopStream(actorDid: string) {
   const applicationManager = useApplicationManager()
   const runtimeConfig = useRuntimeConfig()
 
