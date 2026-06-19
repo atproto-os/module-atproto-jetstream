@@ -1,1 +1,36 @@
+# Dependencies
 node_modules
+playground/node_modules
+
+# Nuxt module build
+.nuxt
+dist
+
+# Playground / Nitro output
+playground/.nuxt
+playground/.output
+playground/dist
+
+# Caches & temp
+.cache
+.temp
+.tmp
+.data
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+._*
+
+# Editors
+.idea
+*.iml
+.vscode/*
+!.vscode/settings.json
